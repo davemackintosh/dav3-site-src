@@ -15,8 +15,9 @@ pushd "$CWD/public"
   # Do the work.
   git add . &&
   git commit -s -m "Auto deployment of updated assets @ $DATE" &&
-  git push &&
-  $TPL_SHA=`git rev-parse HEAD`
+  git push --set-upstream origin master &&
+
+  TPL_SHA="- $(git rev-parse HEAD)"
 
 # Exit the directory back to the site-source repo.
 popd
@@ -26,7 +27,7 @@ echo -e "\033[0;33m Updating 'public' SHA.\033[0m\n\n"
 
 # Update the SHA and push.
 git add public/ &&
-git commit -s -m "Updating public SHA - $TPL_SHA @ $DATE" &&
+git commit -s -m "Updating public SHA $TPL_SHA @ $DATE" &&
 git push &&
 
 echo -e "\033[0;33m Done, go check out the updates.\033[0m\n\n"
