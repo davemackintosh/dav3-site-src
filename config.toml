@@ -2,3 +2,8 @@ baseurl = "http://localhost:1313/"
 languageCode = "en-us"
 title = "NodeJS, Golang and Swiftlang freelancer"
 description = "Dave Mackintosh is a NodeJS, Golang, Swiftlang & UI designer/developer"
+
+[params]
+  disqusShortname = "dav3"
+  Keywords = "Dave Mackintosh, Freelance, NodeJS, Golang, Swiftlang, UI, Developer, Designer"
+  Description = "Dave Mackintosh is a NodeJS, Golang, Swiftlang & UI designer/developer"

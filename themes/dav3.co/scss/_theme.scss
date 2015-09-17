@@ -1,5 +1,6 @@
 // The colours used throughout the site.
 $base-colour: #333;
+$background-colour: #f5f6f7;
 $primary-colour: #0C8B90;
 $secondary-colour: #AB4180;
 
@@ -8,8 +9,8 @@ $vertical-rhythm: 2vh;
 
 // Typography.
 $font-size: 1.8vw;
-$font-family: 'Roboto Condensed', sans-serif;
-$font-colour: #FFF;
+$font-family: 'Helvetica', sans-serif;
+$font-colour: $base-colour;
 $font-weight: 300;
 
 // Other useful one-timers.

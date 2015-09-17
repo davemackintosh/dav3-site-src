@@ -3,11 +3,8 @@
   height: 100vh;
   margin-top: -20vh;
   padding-top: 20vh;
-  @include background-image($noise-data, linear-gradient($primary-colour, $secondary-colour));
 }
 
 .colour {
   @extend .content-column;
-  background: $base-colour;
-  @include skew-content();
 }
