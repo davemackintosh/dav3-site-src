@@ -28,6 +28,6 @@ echo -e "\033[0;33m Updating 'public' SHA.\033[0m\n\n"
 # Update the SHA and push.
 git add public/ &&
 git commit -s -m "Updating public SHA $TPL_SHA @ $DATE" &&
-git push &&
+git push --set-upstream origin master &&
 
 echo -e "\033[0;33m Done, go check out the updates.\033[0m\n\n"
