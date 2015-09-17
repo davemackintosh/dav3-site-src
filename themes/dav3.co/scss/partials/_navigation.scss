@@ -1,0 +1,19 @@
+.navigation {
+  height: 20vh;
+  width: 100vw;
+
+  &__logo {
+    border: 0;
+
+    &:hover {
+      text-decoration: none;
+      border: 0;
+    }
+
+    &--image {
+      display: block;
+      margin: $vertical-rhythm auto;
+      height: 100%;
+    }
+  }
+}

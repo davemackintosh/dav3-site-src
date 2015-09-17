@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xml:lang="{{ .Site.LanguageCode }}" lang="{{ .Site.LanguageCode }}">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  <meta name="keywords" content="{{ .Site.Params.Keywords }}">
+
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Site.Params.Description }}">
+  <meta property="og:url" content="{{ .Site.BaseURL }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/social-logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ .Site.Params.Description }}">
+  <meta name="twitter:url" content="{{ .Site.BaseURL }}">
+  <meta name="twitter:image:src" content="{{ .Site.BaseURL }}images/social-logo.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Website",
+      "publisher": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}",
+      "image": "{{ .Site.BaseURL }}images/social-logo.png",
+      "description": "{{ .Site.Params.Description }}"
+    }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/theme.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,400italic,700italic|Orbitron:700' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  <!-- RSS -->
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" >
+</head>

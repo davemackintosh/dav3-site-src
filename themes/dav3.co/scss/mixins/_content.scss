@@ -1,0 +1,41 @@
+.content-column {
+  padding: $vertical-rhythm;
+  text-align: center;
+}
+
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);
+
+// Skew this element by N degrees and adjust the margin.
+// @param {Number} $amount - Amount to skew the Y axis.
+@mixin skew-content($amount: -6deg, $margin: true) {
+  // Skew the content on the y axis.
+  @include transform(skew(0, $amount));
+  @include transform-origin(top left);
+
+  // Make sure there's no top margin.
+  margin-top: 0;
+}
+
+// Responsive manager.
+// @access public
+// @link http://sass-guidelin.es/#breakpoint-manager
+// @param {String} $breakpoint - Breakpoint
+// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

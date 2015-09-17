@@ -1,0 +1,18 @@
+@import
+  "bourbon/bourbon",
+  "neat/neat",
+  "theme";
+
+// Get the partials.
+@import
+  "partials/navigation",
+  "partials/headers",
+  "partials/global";
+
+// Any helpers.
+@import
+  "mixins/content";
+
+// Get the pages/posts styles.
+@import
+  "pages/index";

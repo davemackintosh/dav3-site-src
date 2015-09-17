@@ -1,0 +1,41 @@
+// Automatic vertical rhythm.
+*+* {
+  margin-top: $vertical-rhythm;
+}
+
+html, body {
+  padding: 0; margin: 0;
+}
+
+html {
+  background: $primary-colour;
+  font: $font-weight $font-size $font-family;
+  color: $font-colour;
+
+  box-sizing: border-box;
+}
+
+// Fix link styles.
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    border-bottom: .1em solid $font-colour;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $primary-colour;
+    border-color: $primary-colour;
+  }
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
